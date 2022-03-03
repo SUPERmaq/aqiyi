@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container1{
+    width: 100%;
+    height: 1000px;  
+    background-color: rgba(0,0,0, 0.3);
+    display: block;
+    position: relative;
+    
+}
+.container2{
+    width: 360px;
+    height: 440px;
+    border: 2px springgreen solid;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+     left: 40%;
+     top: 10%;
+    
+}
+.head{
+    width: 360px;
+    height: 62px;
+    position: relative;
+}
+
+.aiqiyi{
+    width: 360px;
+    height: 62px;
+    text-align: center;
+    line-height: 62px;
+}
+.aiqiyi>img{
+    width: 60px;
+    height: 20px;
+}
+.close{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+.close>a{
+    text-decoration: none;
+    color: black;
+}
+.body{
+    width: 360px;
+    height: 360px;
+    text-align: center;
+}
+.body_1{
+    width: 304px;
+    height: 360px;
+
+}
+.body_1_form{
+    width: 304px;
+    height: 223px;
+    margin-left: 28px;
+}
+.body_1_form_a{
+    width: 304px;
+    height: 24px;
+}
+.body_1_agree{
+    width: 304px;
+    height: 40px;
+}
+.body_1_bottom{
+    width: 304px;
+    height: 72px;
+}
+.body_1_form_a>a:nth-of-type(1){
+    color:#16e067 ;
+}
+.body_1_form_a>a{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    line-height: 24px;
+    margin: 0 20px;
+    font-size: 16px;
+    color: #333;
+}
+.body_1_form_a>a>span{
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left: -11px;
+    width: 22px;
+    height: 2px;
+    background: #00cc4c;
+    border-radius: 1px;
+    display: inline-block;
+}
+.body_1_form_tel{
+    width: 304px;
+    height: 65px;
+  
+}
+
+.body_1_form_tel_input{
+    width: 304px;
+    height: 36px;
+    padding-top: 8px;
+    position: relative;
+    line-height: 36px;
+    border-bottom: 1px solid #d8d8d8;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+     color: #999;
+}
+.body_1_form_tel_input>i{
+    width: 16px;
+    line-height: 36px;
+}
+.body_1_form_tel_input>input{
+    border: none;
+    font-size: 14px;
+    
+}
+.body_1_form_tel_check{
+    width: 304px;
+    height: 15px;
+    font-size: 10px;
+    color: red;
+    text-align: left;
+  
+   
+}
+.body_1_form_passowrd{
+    width: 304px;
+    height: 65px;
+  
+}
+
+.body_1_form_password_input{
+    width: 304px;
+    height: 36px;
+    padding-top: 8px;
+    position: relative;
+    line-height: 36px;
+    border-bottom: 1px solid #d8d8d8;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+     color: #999;
+}
+.body_1_form_password_input>span:hover{
+    color: #16e067;
+}
+.body_1_form_password_input>input{
+    border: none;
+    font-size: 14px;
+    
+}
+.body_1_form_password_check{
+    width: 304px;
+    height: 15px;
+    font-size: 10px;
+    color: red;
+    text-align: left;
+    display: none;
+}
+
+.body_1_form_btn{
+    width: 304px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    margin-top: 15px;
+}
+.body_1_form_btn>a{
+    text-decoration: none;
+    color: white;
+}
+.body_1_agree{
+    width: 304px;
+    height: 40px;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 28px;
+}
+.body_1_agree_1{
+    width: 304px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+   
+}
+.body_1_agree_1>p>span{
+    color: #16e067;
+}
+.body_1_agree_1>input{
+    width: 14px;
+    height: 14px;
+     margin-right: 5px;
+   
+}
+.body_1_agree_2{
+    width: 304px;
+    height: 20px;
+    font-size: 12px;
+}
+.body_1_bottom{
+    width: 304px;
+    height: 72px;
+    margin-left: 28px;
+    margin-top: 25px;
+}
+.body_1_bottom_1{
+    width: 304px;
+    height: 22px;
+    text-align: center;
+    font-size: 16px;
+}
+.body_1_bottom_2{
+    width: 304px;
+    height: 40px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+.body_1_bottom_2>div{
+    width: 40px;
+    height: 40px;
+}
+.body_1_bottom_2>div:nth-of-type(1){
+    background-image: url(../img/login-v2021@2x.png);
+    background-position: 90px 0;
+    background-size: 230px 140px;
+}
+.body_1_bottom_2>div:nth-of-type(2){
+    background-image: url(../img/login-v2021@2x.png);
+    background-position: 40px 0;
+    background-size: 230px 140px;
+}
+.body_1_bottom_2>div:nth-of-type(3){
+    background-image: url(../img/login-v2021@2x.png);
+    background-position: 90px 92px;
+    background-size: 230px 140px;
+}
+.body_1_bottom_2>div:nth-of-type(4){
+    background-image: url(../img/login-v2021@2x.png);
+    background-position: 130px 40px;
+    background-size: 230px 140px;
+}
+.body_1_bottom_2>div:nth-of-type(5){
+    background-image: url(../img/login-v2021@2x.png);
+    background-position: 180px 40px;
+    background-size: 230px 140px;
+}
+.body_1_bottom_2>div:nth-of-type(6){
+    background-image: url(../img/login-v2021@2x.png);
+    background-position: 230px 40px;
+    background-size: 230px 140px;
+}

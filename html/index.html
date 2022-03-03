@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script src="../js/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="../js/index.js"></script>
+
+</head>
+
+<body onload="getimg()">
+    <div id="container">
+        <!-- //以下是导航栏部分================================= -->
+        <div id="header">
+            <!-- 左边图标 -->
+            <div><img src="../img/login-logo-iqiyi.png" alt=""></div>
+            <!-- 中间的搜索，热搜和搜全网 -->
+            <div class="header_mid">
+                <div class="header_mid_1">
+                    <input type="text" class="header_mid_input" placeholder="海绵宝宝" id="header_mid_1_input"
+                        onclick="show_getinput()">
+                    <i class="fa fa-fire"> <a href="index2.html" class="a_resou"><span>热搜榜</span></a> </i>
+                    <a href="" class="header_mid_search"><span class="fa fa-search"></span><span
+                            class="header_mid_search_word">搜全网</span></a>
+                </div>
+            </div>
+            <!-- 右边的小图标 -->
+            <div class="header_right">
+                <div class="header_right_div" id="header_right_div1">
+                    <p><i class="fa fa-diamond "></i></p>
+                    <p class="p1">vip</p>
+                </div>
+                <div class="header_right_div" id="header_right_div2" onclick="toindex3()">
+                    <p><i class="fa fa-clock-o"></i></p>
+                    <p class="p1">播放记录</p>
+                </div>
+                <div class="header_right_div">
+                    <p><i class="fa fa-plus-square-o"></i></p>
+                    <p class="p1"> 关注</p>
+                </div>
+                <div class="header_right_div">
+                    <p><i class="fa fa-upload"></i></p>
+                    <p class="p1">上传</p>
+                </div>
+                <div class="header_right_div">
+                    <p><i class="fa fa-youtube-play"></i></p>
+                    <p class="p1">客户端</p>
+                </div>
+                <div class="header_right_div" id="header_right_div6"><img src="../img/02.png" alt="">
+                    <p>登录</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- //引入登陆页面并隐藏 -->
+        <div id="login" class="loginhide">
+            <iframe src="log.html" width="100%" frameborder="no" scrolling="no" height="100%"></iframe>
+           
+        </div>
+         <!-- //引入注册页面并隐藏 -->
+        <div id="joinin" class="joininhide">
+            <iframe src="joinin.html" width="100%" frameborder="no" scrolling="no" height="100%"  ></iframe>
+        </div>
+ 
+
+        <!-- //以下是导航栏隐藏部分================================= -->
+
+
+
+        <!-- 搜索框下拉菜单 -->
+        <div class="header_hide_1" id="header_hide_1">
+            <div>热门搜索</div>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">1</div>
+                    <div>鱿鱼游戏</div>
+                </div>
+            </a>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">2</div>
+                    <div>小猪佩奇</div>
+                </div>
+            </a>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">3</div>
+                    <div>熊出没</div>
+                </div>
+            </a>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">4</div>
+                    <div>木鱼</div>
+                </div>
+            </a>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">5</div>
+                    <div>突围</div>
+                </div>
+            </a>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">6</div>
+                    <div>一生一世</div>
+                </div>
+            </a>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">7</div>
+                    <div>奥特曼</div>
+                </div>
+            </a>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">8</div>
+                    <div>开心锤锤</div>
+                </div>
+            </a>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">9</div>
+                    <div>猫和老鼠</div>
+                </div>
+            </a>
+            <a href="" class="header_hide_1_a">
+                <div class="header_hide_1_div">
+                    <div class="header_hide_1_div_div">10</div>
+                    <div>长津湖</div>
+                </div>
+            </a>
+
+        </div>
+           <!-- 第一个图标的隐藏 -->
+        <div class="header_hide_2" id="header_hide_2">
+            <div class="header_hide_2_left">
+                <ul>
+                    <li><i class="fa fa-sun-o "></i><span>了解vip会员特权</span></li>
+                    <li><i class="fa fa-gift "></i><span>领取vip会员福利</span></li>
+                    <li><i class="fa fa-columns "></i><span>做任务，领奖励</span></li>
+                    <li><i class="fa fa-diamond "></i><span>星钻vip享新权益</span></li>
+
+                </ul>
+            </div>
+            <div class="header_hide_2_right">
+                <div class="header_hide_2_right1">连续包月超低优惠</div>
+                <div class="header_hide_2_right2">扫码查看详情</div>
+                <div class="header_hide_2_right3">
+                    <img src="../img/getIMG.jpg" alt="">
+                </div>
+                <div class="header_hide_2_right4">
+                    <p>建议支付宝或微信扫码</p>
+                    <p>支付后刷新享会员权益</p>
+                </div>
+            </div>
+            <div class="header_hide_2_button">
+                <div>
+                    <a href="">
+                        登录
+                    </a>
+                </div>
+            </div>
+        </div>
+             <!-- 查看更多图标的隐藏 -->
+        <div class="header_hide_3" id="header_hide_3">
+            <ul>
+                <li><img src="../img/chuanqi.png" alt=""></li>
+                <li><img src="../img/xiaoaojianghu.png" alt=""></li>
+                <li><img src="../img/anhei.jpg" alt=""></li>
+            </ul>
+            <div>查看更多</div>
+        </div>
+          <!-- 登陆注册的隐藏 -->
+        <div class="header_hide_4" id="header_hide_4">
+            <div>
+                <p><a href="#" onclick="showlog()">登录</a> <span>/</span><a href="#" onclick="showjoin()">注册</a>后多设备同步 </p>
+            </div>
+            <ul>
+                <li><i class="fa fa-clock-o"></i><span>观看历史永相随</span></li>
+                <li><i class="fa fa-star-o"></i><span>收藏剧集及时追</span></li>
+            </ul>
+            <button class="header_hide_4_button">
+                <!-- 使用点击事件弹出登录框 -->
+                <a href="#" onclick="showlog()">立即登录</a>
+            </button>
+        </div>
+        <!-- //以下是轮播图部分================================= -->
+        <div class="body_top">
+            <div class="body_top_lunbo">
+                <img src="../img/04.jpg" alt="" name="body_top_lunbo_img">
+                <img src="../img/05.jpg" alt="" name="body_top_lunbo_img">
+                <img src="../img/06.jpg" alt="" name="body_top_lunbo_img">
+                <img src="../img/07.jpg" alt="" name="body_top_lunbo_img">
+                <img src="../img/08.jpg" alt="" name="body_top_lunbo_img">
+                <img src="../img/09.jpg" alt="" name="body_top_lunbo_img">
+                <ul class="body_top_lunbo_img_ul">
+                    <li name="body_top_lunbo_img_ul_li" onclick="turn(this)">欢乐大篷车</li>
+                    <li name="body_top_lunbo_img_ul_li" onclick="turn(this)">好好生活</li>
+                    <li name="body_top_lunbo_img_ul_li" onclick="turn(this)">天天向上</li>
+                    <li name="body_top_lunbo_img_ul_li" onclick="turn(this)">时光音乐会</li>
+                    <li name="body_top_lunbo_img_ul_li" onclick="turn(this)">刺客学院</li>
+                    <li name="body_top_lunbo_img_ul_li" onclick="turn(this)">第十二秒</li>
+                </ul>
+            </div>
+            <div class="body_top_ul"></div>
+        </div>
+        <!-- 轮播下面的ulli列表============================================= -->
+
+        <div class="lunbo_div">
+            <div class="lunbo_div_left">
+                <div class="lunbo_div_left_div">
+                    <p class="lunbo_div_left_div_1">电影</p>
+                    <p class="lunbo_div_left_div_2">热播大片</p>
+                    <p class="lunbo_div_left_div_2">全部电影</p>
+                </div>
+                <div class="lunbo_div_left_div">
+                    <p class="lunbo_div_left_div_1">电视剧</p>
+                    <p class="lunbo_div_left_div_2">恋恋剧场</p>
+                    <p class="lunbo_div_left_div_2">迷雾剧场</p>
+                </div>
+                <div class="lunbo_div_left_div">
+                    <p class="lunbo_div_left_div_1">电影</p>
+                    <p class="lunbo_div_left_div_2">热播大片</p>
+                    <p class="lunbo_div_left_div_2">全部电影</p>
+                </div>
+                <div class="lunbo_div_left_div">
+                    <p class="lunbo_div_left_div_1">综艺</p>
+                    <p class="lunbo_div_left_div_2">王牌自制</p>
+                    <p class="lunbo_div_left_div_2">热播节目</p>
+                </div>
+                <div class="lunbo_div_left_div">
+                    <p class="lunbo_div_left_div_1">动漫</p>
+                    <p class="lunbo_div_left_div_2">新热国漫</p>
+                    <p class="lunbo_div_left_div_2">新番上线</p>
+                </div>
+                <div class="lunbo_div_left_div">
+                    <p class="lunbo_div_left_div_1">儿童</p>
+                    <p class="lunbo_div_left_div_2">热播动画</p>
+                    <p class="lunbo_div_left_div_2">最新动画</p>
+                </div>
+                <div class="lunbo_div_left_div">
+                    <p class="lunbo_div_left_div_1">纪录片</p>
+                    <p class="lunbo_div_left_div_2">热播剧场</p>
+                    <p class="lunbo_div_left_div_2">探索世界</p>
+                </div>
+
+            </div>
+
+            <div class="lunbo_div_right">
+                <div class="lunbo_div_right_div">
+                    <p>体育</p>
+                    <p>知识</p>
+                    <p>资讯</p>
+                </div>
+                <div class="lunbo_div_right_div">
+                    <p>新片</p>
+                    <p>风云榜</p>
+                    <p>泡泡</p>
+                </div>
+                <div class="lunbo_div_right_div">
+                    <p>搞笑</p>
+                    <p>游戏</p>
+                    <p>娱乐</p>
+                </div>
+                <div class="lunbo_div_right_div">
+                    <p>军事</p>
+                    <p>汽车</p>
+                    <p>母婴</p>
+                </div>
+
+
+                <div class="lunbo_div_right_div_1">
+                    <p>会员精选</p>
+                    <p>公益</p>
+                    <p> 更多<i class="fa fa-chevron-down"></i></p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ul列表下面的大块图文================= -->
+        <div class="content">
+            <div class="content_1">
+                <ul class="content_1_ul">
+                    <li class="content_1_ul_li">
+                        <img src="../img/content_1-1.avif" alt="" class="content_1_ul_li_img">
+                        <p class="content_1_ul_li_p">北方多地采暖区进入倒计时</p>
+                    </li>
+                    <li class="content_1_ul_li">
+                        <img src="../img/content_1-2.webp" alt="" class="content_1_ul_li_img">
+                        <p class="content_1_ul_li_p">旅行团疫情病例关系更新</p>
+                    </li>
+                    <li class="content_1_ul_li">
+                        <img src="../img/content_1-3.webp" alt="" class="content_1_ul_li_img">
+                        <p class="content_1_ul_li_p">开拍吧电影导演阵容...</p>
+                    </li>
+                    <li class="content_1_ul_li">
+                        <img src="../img/content_1-4.avif" alt="" class="content_1_ul_li_img">
+                        <p class="content_1_ul_li_p">林一母乳喂奶笑翻baby</p>
+                    </li>
+                    <li class="content_1_ul_li">
+                        <img src="../img/content_1-5.avif" alt="" class="content_1_ul_li_img">
+                        <p class="content_1_ul_li_p">金晨再跳12年前获奖名舞</p>
+                    </li>
+                    <li class="content_1_ul_li">
+                        <img src="../img/content_1-6.avif" alt="" class="content_1_ul_li_img">
+                        <p class="content_1_ul_li_p">重回砝码大陆，继承奇迹</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="content_2">
+                <div class="content_2_div">
+                    <span class="content_2_div_span">精彩推荐</span>
+                    <div class="content_2_div_div"> 登陆后推荐更精准~<span class="content_2_div_div_span">立即登录</span></div>
+                </div>
+                <ul class="content_2_ul">
+                    <li class="content_2_ul_li">
+                        <img src="../img/content_2-3.webp" alt="" class="content_2_ul_li_img">
+                        <img src="../img/content_2-2.png" alt="" class="content_2_ul_li_img1">
+                        <p class="content_2_ul_li_p">赛车总动员</p>
+                        <p class="content_2_ul_li_p1">一辆赛车的中年危机</p>
+                    </li>
+                    <li class="content_2_ul_li">
+                        <img src="../img/content_2-4.webp" alt="" class="content_2_ul_li_img">
+                        <img src="../img/content_2-2.png" alt="" class="content_2_ul_li_img1">
+                        <p class="content_2_ul_li_p">游侠佐罗:星球大战外传</p>
+                        <p class="content_2_ul_li_p1">全新银河系探险历程</p>
+                    </li>
+                    <li class="content_2_ul_li">
+                        <img src="../img/content_2-5.webp" alt="" class="content_2_ul_li_img">
+                        <img src="../img/content_2-2.png" alt="" class="content_2_ul_li_img1">
+                        <p class="content_2_ul_li_p">迷你特工队之超级恐龙</p>
+                        <p class="content_2_ul_li_p1">全新超级恐龙力量出动</p>
+                    </li>
+                    <li class="content_2_ul_li">
+                        <img src="../img/content_2-6.webp" alt="" class="content_2_ul_li_img">
+                        <img src="../img/content_2-2.png" alt="" class="content_2_ul_li_img1">
+                        <p class="content_2_ul_li_p">奇幻精灵事件簿</p>
+                        <p class="content_2_ul_li_p1">熊孩子奇幻研究指南</p>
+                    </li>
+                    <li class="content_2_ul_li">
+                        <img src="../img/content_2-7.webp" alt="" class="content_2_ul_li_img">
+                        <img src="../img/content_2-2.png" alt="" class="content_2_ul_li_img1">
+                        <p class="content_2_ul_li_p">超时空接触</p>
+                        <p class="content_2_ul_li_p1">真正的高潮来及结尾</p>
+                    </li>
+                    <li class="content_2_ul_li">
+                        <img src="../img/content_2-8.avif" alt="" class="content_2_ul_li_img">
+                        <img src="../img/content_2-2.png" alt="" class="content_2_ul_li_img1">
+                        <p class="content_2_ul_li_p">登场了！洛阳</p>
+                        <p class="content_2_ul_li_p1">娄艺潇扮演晚年武则天</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="content_3">
+                <div class="content_3_left" id="content_3_left">
+                    <div class="content_3_left_div">
+                        <span class="content_3_left_div_span">电视剧</span>
+                        <ul class="content_3_left_div_ul">
+                            <li class="content_3_left_div_ul_li">内地</li>
+                            <li class="content_3_left_div_ul_li">自制剧</li>
+                            <li class="content_3_left_div_ul_li">网络剧</li>
+                            <li class="content_3_left_div_ul_li">迷雾剧场</li>
+                            <li class="content_3_left_div_ul_li">恋恋剧场</li>
+                            <li class="content_3_left_div_ul_li">神剧亮了</li>
+                            <li class="content_3_left_div_ul_li" id="content_3_left_div_ul_li">更多</li>
+                        </ul>
+                        <span class="content_3_left_div_span1"> <i class="fa fa-chevron-circle-left"></i>
+                            <i class="fa fa-chevron-circle-right"></i></span>
+                    </div>
+
+                    <ul class="content_3_left_ul">
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-1.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">梦见狮子</p>
+                            <p class="content_3_left_ul_li_p1">付清吴昱衡上头姐弟恋</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-2.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">八角亭迷雾</p>
+                            <p class="content_3_left_ul_li_p1">每个人都是家的一角</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-3.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">迦南传</p>
+                            <p class="content_3_left_ul_li_p1">鞠净玮执手相伴</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-4.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">无神之地不下雨</p>
+                            <p class="content_3_left_ul_li_p1">增值樵夫梦白爱恋</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-5.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">你好母亲大人</p>
+                            <p class="content_3_left_ul_li_p1">寻禅母子不寻常的故事</p>
+                        </li>
+                    </ul>
+
+                    <ul class="content_3_left_ul">
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-6.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">前行者</p>
+                            <p class="content_3_left_ul_li_p1">张鲁聂远双雄对决</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-7.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">突围</p>
+                            <p class="content_3_left_ul_li_p1">靳东倪妮守护人民财产</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-8.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">功勋</p>
+                            <p class="content_3_left_ul_li_p1">在线八位功勋精彩人生</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-9.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">红旗渠</p>
+                            <p class="content_3_left_ul_li_p1">于震安悦溪修建红旗渠</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-10.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">一生一世</p>
+                            <p class="content_3_left_ul_li_p1">付清吴昱衡上头姐弟恋</p>
+                        </li>
+                    </ul>
+
+
+
+
+                </div>
+                <div class="content_3_right">
+                    <div class="content_3_right_div">
+                        <div class="content_3_right_div_div">
+                            热播榜
+                        </div>
+                        <div class="content_3_right_div_div">
+                            飙升榜
+                        </div>
+                        <div class="content_3_right_div_div1">
+                            更多>
+                        </div>
+
+                    </div>
+                    <div class="content_3_right_div1">
+                        <ul class="content_3_right_div1_ul">
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div  red">
+                                    1
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        突围
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div  green">
+                                    2
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        迦南传
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至18级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div orange">
+                                    3
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        潜行者
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    4
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        八角亭迷雾
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    5
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        一生一世
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    6
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        梦见狮子
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    7
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        周生如故
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    8
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        功勋
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    9
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        霞光
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    10
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        您好！母亲大人
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content_3">
+                <div class="content_3_left" id="content_3_left">
+                    <div class="content_3_left_div">
+                        <span class="content_3_left_div_span">电视剧</span>
+                        <ul class="content_3_left_div_ul">
+                            <li class="content_3_left_div_ul_li">内地</li>
+                            <li class="content_3_left_div_ul_li">自制剧</li>
+                            <li class="content_3_left_div_ul_li">网络剧</li>
+                            <li class="content_3_left_div_ul_li">迷雾剧场</li>
+                            <li class="content_3_left_div_ul_li">恋恋剧场</li>
+                            <li class="content_3_left_div_ul_li">神剧亮了</li>
+                            <li class="content_3_left_div_ul_li" id="content_3_left_div_ul_li">更多</li>
+                        </ul>
+                        <span class="content_3_left_div_span1"> <i class="fa fa-chevron-circle-left"></i>
+                            <i class="fa fa-chevron-circle-right"></i></span>
+                    </div>
+
+                    <ul class="content_3_left_ul">
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-1.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">梦见狮子</p>
+                            <p class="content_3_left_ul_li_p1">付清吴昱衡上头姐弟恋</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-2.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">八角亭迷雾</p>
+                            <p class="content_3_left_ul_li_p1">每个人都是家的一角</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-3.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">迦南传</p>
+                            <p class="content_3_left_ul_li_p1">鞠净玮执手相伴</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-4.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">无神之地不下雨</p>
+                            <p class="content_3_left_ul_li_p1">增值樵夫梦白爱恋</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-5.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">你好母亲大人</p>
+                            <p class="content_3_left_ul_li_p1">寻禅母子不寻常的故事</p>
+                        </li>
+                    </ul>
+
+                    <ul class="content_3_left_ul">
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-6.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">前行者</p>
+                            <p class="content_3_left_ul_li_p1">张鲁聂远双雄对决</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-7.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">突围</p>
+                            <p class="content_3_left_ul_li_p1">靳东倪妮守护人民财产</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-8.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">功勋</p>
+                            <p class="content_3_left_ul_li_p1">在线八位功勋精彩人生</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-9.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">红旗渠</p>
+                            <p class="content_3_left_ul_li_p1">于震安悦溪修建红旗渠</p>
+                        </li>
+
+                        <li class="content_3_left_ul_li">
+                            <img src="../img/content_3-10.webp" alt="" class="content_3_left_ul_li_img">
+                            <img src="../img/self.png" alt="" class="content_3_left_ul_li_img1">
+                            <p class="content_3_left_ul_li_p">一生一世</p>
+                            <p class="content_3_left_ul_li_p1">付清吴昱衡上头姐弟恋</p>
+                        </li>
+                    </ul>
+
+
+
+
+                </div>
+                <div class="content_3_right">
+                    <div class="content_3_right_div">
+                        <div class="content_3_right_div_div">
+                            热播榜
+                        </div>
+                        <div class="content_3_right_div_div">
+                            飙升榜
+                        </div>
+                        <div class="content_3_right_div_div1">
+                            更多>
+                        </div>
+
+                    </div>
+                    <div class="content_3_right_div1">
+                        <ul class="content_3_right_div1_ul">
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div  red">
+                                    1
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        突围
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div  green">
+                                    2
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        迦南传
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至18级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div orange">
+                                    3
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        潜行者
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    4
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        八角亭迷雾
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    5
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        一生一世
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    6
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        梦见狮子
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    7
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        周生如故
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    8
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        功勋
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    9
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        霞光
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                            <li class="content_3_right_div1_ul_li">
+                                <div class="content_3_right_div1_ul_li_div">
+                                    10
+                                </div>
+
+                                <div class="content_3_right_div1_ul_li_div1">
+                                    <div class="content_3_right_div1_ul_li_div1_div">
+                                        您好！母亲大人
+                                    </div>
+                                    <div class="content_3_right_div1_ul_li_div1_div1"><span>更新至16级</span><span><i
+                                                class="fa fa-fire"> </i>6666</span></div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+          
+    <!-- 引入底部文件 -->
+
+    <div style="width: 100%;height: 300px;margin-top: 30px;">
+        <iframe src="footer.html" frameborder="0" height="100%"></iframe>
+    </div>
+</body>
+
+</html>
